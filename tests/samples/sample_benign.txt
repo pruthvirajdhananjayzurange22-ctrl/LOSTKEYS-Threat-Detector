@@ -1,0 +1,6 @@
+[2025-01-15 08:30:12 UTC] EventID: 7036 - The System Event Notification Service entered the running state.
+[2025-01-15 08:30:15 UTC] EventID: 4624 - Successful Account Logon: User Administrator on WORKSTATION-01.
+[2025-01-15 08:31:00 UTC] EventID: 105 - Windows Update service started successfully.
+[2025-01-15 08:32:45 UTC] Process Create: C:\Program Files\Google\Chrome\Application\chrome.exe --profile-directory=Default
+[2025-01-15 08:35:10 UTC] File System Audit: Access granted to C:\Users\Admin\Documents\Project_Plan.docx
+[2025-01-15 08:40:00 UTC] EventID: 7040 - The Start type of Background Intelligent Transfer Service was changed to auto start.

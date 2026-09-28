@@ -1,0 +1,51 @@
+{
+  "threat_actor": "COLDRIVER / Star Blizzard (GTIG 2025)",
+  "campaign": "LOSTKEYS ClickFix Attack Chain",
+  "description": "Defensive IoC database for COLDRIVER ClickFix lures and LOSTKEYS malware family",
+  "hashes": [
+    "28a0596b9c62b7b7aca9cac2a07b067109f27d327581a60e8cb4fab92f8f4fa9"
+  ],
+  "domains": [
+    "cloudmediaportal[.]com",
+    "cloudmediaportal.com"
+  ],
+  "ips": [
+    "165.227.148[.]68",
+    "165.227.148.68"
+  ],
+  "suspicious_strings": [
+    "LOSTKEYS",
+    "wscript",
+    "ipconfig /all",
+    "net view",
+    "tasklist",
+    "FromBase64String"
+  ],
+  "mitre_mappings": {
+    "scripting": {
+      "id": "T1059.001",
+      "name": "Command and Scripting Interpreter: PowerShell",
+      "description": "Adversaries may use PowerShell to execute commands and scripts for malicious actions."
+    },
+    "clickfix": {
+      "id": "T1204.002",
+      "name": "User Execution: Malicious Copy-Paste (ClickFix)",
+      "description": "Social engineering technique luring users to paste obfuscated PowerShell into terminal."
+    },
+    "process_discovery": {
+      "id": "T1057",
+      "name": "Process Discovery",
+      "description": "Adversaries may attempt to get information about running processes (e.g., via tasklist)."
+    },
+    "system_info_discovery": {
+      "id": "T1082",
+      "name": "System Information Discovery",
+      "description": "Gathering detailed system architecture and configuration info (e.g., ipconfig /all)."
+    },
+    "network_share_discovery": {
+      "id": "T1083",
+      "name": "File and Directory Discovery / Network Shares",
+      "description": "Enumerating network shares and domain resources (e.g., net view)."
+    }
+  }
+}
